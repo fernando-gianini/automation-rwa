@@ -8,7 +8,7 @@ class RegisterUser {
             userNameField : '[name="username"]',
             passworldField : '[name="password"]',
             confirmPassworldField : '[name="confirmPassword"]',
-            submitButtom: '[type="submit"]'
+            submitButtom: '[type="submit"]'            
                 }
 
         return selectors
@@ -22,6 +22,7 @@ class RegisterUser {
         cy.get(this.selectorsList().userNameField).type(userName)
         cy.get(this.selectorsList().passworldField).type(password)
         cy.get(this.selectorsList().confirmPassworldField).type(confirmePassword)
+        
     }
 
     signUpCadButton () {

@@ -9,8 +9,9 @@ describe('Login com sucesso', () => {
   it('Login-Sucess', () => {
     LoginPage.accessLoginPage()
     LoginPage.loginWhiteAnyUser(userData.userSucess.userName, userData.userSucess.password)
+    LoginPage.confirmLogin()
     }
   )
-      
+     
   }
 )
