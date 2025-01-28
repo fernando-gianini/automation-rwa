@@ -1,6 +1,7 @@
 class RegisterUser {
 
     selectorsList () {
+       
         const selectors = {
             signUpButton : '[data-test="signup"]',
             firstNameField : '[name="firstName"]',
@@ -8,7 +9,9 @@ class RegisterUser {
             userNameField : '[name="username"]',
             passworldField : '[name="password"]',
             confirmPassworldField : '[name="confirmPassword"]',
-            submitButtom: '[type="submit"]'            
+            submitButtom: '[type="submit"]',    
+            confirmFailAlert: '.SignUpForm-paper'
+
                 }
 
         return selectors
@@ -27,6 +30,12 @@ class RegisterUser {
 
     signUpCadButton () {
         cy.get(this.selectorsList().submitButtom).click()
+    }
+    alertRegisterFailUser() {
+
+        cy.get(this.selectorsList().confirmFailAlert).contains(/First Name is required| Last Name is required| Username is required|Enter your password|Password must contain at least 4 characters|Confirm your password|Password does not match/).should('exist')
+       
+
     }
    
 }
