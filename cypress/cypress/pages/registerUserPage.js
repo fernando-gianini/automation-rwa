@@ -18,7 +18,7 @@ class RegisterUser {
     }
     
     
-    registerRandomUserData (firstName, lastName, userName, confirmePassword) {
+    registerRandomUserData (firstName, lastName, userName, password, confirmePassword) {
         cy.get(this.selectorsList().signUpButton).click()
         cy.get(this.selectorsList().firstNameField).type(firstName)
         cy.get(this.selectorsList().lastNameField).type(lastName)
