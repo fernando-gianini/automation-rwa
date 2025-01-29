@@ -1,21 +1,18 @@
-import loginPage from "../../pages/loginPage.js"
-import registerUser from "../../pages/registerUserPage.js"     
+import LoginPage from "../../../pages/loginPage.js"
+import registerUser from "../../../pages/registerUserPage.js"     
 
 const Chance = require('chance');
 const valueToType = null;
 
 const chance = new Chance();
 const RegisterUser = new registerUser ()
-const LoginPage = new loginPage ()
+const loginPage = new LoginPage ()
 
 describe ('Register User Fail', () => {
   
     it('Register-User-Fail', () => {
-        LoginPage.accessLoginPage()
+        loginPage.accessLoginPage()
         RegisterUser.registerRandomUserData(chance.first(), chance.last(),'Admin','123','1234')
         RegisterUser.alertRegisterFailUser()
-        
-      
-     
     })
 })

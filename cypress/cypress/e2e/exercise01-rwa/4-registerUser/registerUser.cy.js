@@ -1,5 +1,5 @@
-import loginPage from "../../pages/loginPage.js"
-import registerUser from "../../pages/registerUserPage.js"     
+import loginPage from "../../../pages/loginPage.js"
+import registerUser from "../../../pages/registerUserPage.js"     
 
 const Chance = require('chance');
 

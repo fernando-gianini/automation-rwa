@@ -5,7 +5,7 @@ class LoginPage {
             usernameField : '[name="username"]',
             passwordField : '[type="password"]',
             submitButton : '[type="submit"]',
-            confirmBoxLogin: '[data-test="user-onboarding-dialog-title"]',
+            confirmBoxLogin: '[data-test="app-name-logo"]',
             failLoginAccess: '[data-test="signin-error"]'
         } 
 
