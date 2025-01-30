@@ -6,9 +6,6 @@ const LoginPage = new loginPage ()
 const SendMoney = new sendMoney ()
 
 describe ('Enviar dinheiro com saldo suficiente', () => {
-  beforeEach(() => {
-    // Define a sessão para ser reutilizada
-    Cypress.session.clearAllSavedSessions();
   });
     it('Login-Sucess', () => {
       LoginPage.accessLoginPage()
@@ -16,6 +13,6 @@ describe ('Enviar dinheiro com saldo suficiente', () => {
       LoginPage.confirmLogin()
       SendMoney.clickNewSendButton()
       SendMoney.selectorContactList()
-      SendMoney.sendContactMoney('1500,00','teste01')
+      SendMoney.sendContactMoney('15000','teste01')
     });
-  });
+ 
