@@ -6,7 +6,8 @@ class transactionHistory {
             selectMineCamp : '[data-test="nav-personal-tab"]',
             confirmTransactionCarried : '.MuiPaper-elevation1',
             transactionDetailButton: '.TransactionTitle-title',
-            confirmTransactionDetailCarried : '.TransactionDetail-paper'
+            confirmTransactionDetailCarried : '.TransactionDetail-paper',
+            confirmWithoutDetail: '.MuiPaper-elevation1'
         }
 
         return selector
@@ -23,6 +24,9 @@ class transactionHistory {
         cy.get(this.selectorList().transactionDetailButton).eq(0).click({force : true})
         cy.get(this.selectorList().confirmTransactionDetailCarried).contains(/paid|charged|Transaction Detail/).should('exist')
         cy.visit('/personal')
+    }
+    transactionWhitoutDetail() {    
+        cy.get(this.selectorList().confirmWithoutDetail).contains(/No Transactions/).should('exist')
     }
 }
 

@@ -7,5 +7,10 @@
     "userFail": {
         "userName" : "test01",
         "password" : "test02"
+    },
+
+    "newUser": {
+        "userName" : "Admin3",
+        "password" : "admin"
     }
 }
